@@ -1,0 +1,24 @@
+
+import java.io.*;
+import java.util.*;
+
+public class A {
+
+    public static void main(String[] args) {
+    	Scanner in = new Scanner(System.in);
+                int l = in.nextInt();
+            int r = in.nextInt();
+            int x = in.nextInt();
+            int y = in.nextInt();
+            int k = in.nextInt();
+            boolean ok = false;
+            for (int i = l ; i <= r ; i++) {
+                if (i % k == 0) {
+                    int q = i / k;
+                    if (q >= x && q <= y) ok = true;
+                }
+            }
+            if (ok) System.out.println("YES"); else System.out.println("NO");
+
+    }
+}
